@@ -167,3 +167,27 @@ footer {
   margin-bottom: 0.5rem;
   color: #007b33;
 }
+/* Galeri Kegiatan */
+#gallery {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f2f9f2;
+}
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery-grid img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
