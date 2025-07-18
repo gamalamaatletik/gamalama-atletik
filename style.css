@@ -225,3 +225,8 @@ footer {
 .close:hover {
   color: #ddd;
 }
+#members ul {
+  max-height: 400px; 
+  overflow-y: auto;
+  padding-right: 10px;
+}
