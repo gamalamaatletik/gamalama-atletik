@@ -240,13 +240,20 @@
   <section id="gallery">
     <h2>Galeri Kegiatan</h2>
     <div class="gallery-grid">
-     <img src="GA1.jpg" alt="Kegiatan 1">
-    <img src="GA2.jpg" alt="Kegiatan 2">
-    <img src="GA3.jpg" alt="Kegiatan 3">
-    <img src="GA4.jpg" alt="Kegiatan 4">
-    <img src="GA5.jpg" alt="Kegiatan 5">
-    <img src="GA6.jpg" alt="Kegiatan 6">
-    <img src="GA7.jpg" alt="Kegiatan 7">
+  <img src="GA1.jpg" alt="Kegiatan 1" onclick="openModal(this)">
+  <img src="GA2.jpg" alt="Kegiatan 2" onclick="openModal(this)">
+  <img src="GA3.jpg" alt="Kegiatan 3" onclick="openModal(this)">
+  <img src="GA4.jpg" alt="Kegiatan 4" onclick="openModal(this)">
+  <img src="GA5.jpg" alt="Kegiatan 5" onclick="openModal(this)">
+  <img src="GA6.jpg" alt="Kegiatan 6" onclick="openModal(this)">
+  <img src="GA7.jpg" alt="Kegiatan 7" onclick="openModal(this)">
+</div>
+
+<!-- Modal -->
+<div id="imgModal" class="modal" onclick="closeModal()">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImage">
+</div>
 
   <!-- Kontak -->
   <section id="contact">
@@ -272,6 +279,19 @@
       }
     });
   });
+</script>
+    <script>
+  function openModal(imgElement) {
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.style.display = "block";
+    modalImg.src = imgElement.src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("imgModal");
+    modal.style.display = "none";
+  }
 </script>
 </body>
 </html>
