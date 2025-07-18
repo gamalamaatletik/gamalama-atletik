@@ -167,29 +167,61 @@ footer {
   margin-bottom: 0.5rem;
   color: #007b33;
 }
-/* Galeri Kegiatan */
-#gallery {
-  padding: 3rem 2rem;
-  text-align: center;
-  background-color: #f2f9f2;
-}
-
+/* Galeri */
 .gallery-grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1rem;
-  justify-content: center;
+  padding: 2rem;
 }
 
 .gallery-grid img {
-  width: 200px;      /* Atur sesuai ukuran yang nyaman */
-  height: 150px;     /* Untuk menjaga proporsional jika ingin crop yang konsisten */
-  object-fit: cover; /* Mencegah gambar tampak kebesaran atau terdistorsi */
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
 .gallery-grid img:hover {
   transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.close:hover {
+  color: #ddd;
 }
